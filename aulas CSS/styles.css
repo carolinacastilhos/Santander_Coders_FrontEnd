@@ -10,6 +10,24 @@
   font-size: 62,5%; /*equivale a 10px*/
 }
 
+nav.menu {
+  position: fixed;
+  background-color: #264155;
+  width: 100%;
+  height: 7rem;
+  /* para a imagem do cabeçalho não ficar cortada pela barra de navegação, colocamos o conteúdo main, que inclui ela, com padding-top da mesma altura.  */
+  z-index: 1;
+  /* z-index: 1; indica que este elemento tem uma prioridade em relação a outros elementos com position relative. Se não tivesse esse z-index na nav, os elementos da classe box ficariam por cima dela quando escrolassemos até embabixo  */
+}
+
+nav a {
+  color: white;
+}
+
+main {
+  padding-top: 7rem;
+}
+
 .background-img {
   background-image: url(https://images.unsplash.com/photo-1684266897797-d6e54c28aaf3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=928&q=80);
   background-size: cover;
@@ -70,6 +88,10 @@ ol {
   /* para colocar um zero antes do número que indica cada item na lista */
 }
 
+.boxes {
+  position: relative;
+}
+
 .box {
   height: 10rem;
   width: 20rem;
@@ -84,6 +106,26 @@ ol {
   /* padding atua dentro do elemento */
   margin: 1.5rem;
   /* margin atua fora do elemento */
+  position: static;
+  /* position padrão é o static. Esta position não permite que tenha os parâmetros top left, entre outras, setadas */
+}
+
+.box:nth-child(1) {
+  /* elemento 1 é a caixa 1 */
+  position: absolute;
+  /* com a posição absolute, o elemento não vai ocupar espaço em tela, ou seja, ele sai do fluxo normal dos outros elementos */
+  /* se este elemento tem position absolute e os outros elementos pai dele não tem declarada uma position, ele respeitará o tamanho da página para se posicionar */
+  /* agora se o elemento pai, que neste exemplo é a div boxes, tiver a position relative declarada, o absolute será contado a partir do elemento pai e não da página inteira */
+  top: 30px;
+  left: 100px;
+}
+
+.box:nth-child(2) {
+  /* elemento 2 é a caixa 2 */
+  position: fixed;
+  /* position fixed faz com que o elemento fique fixo neste mesmo local mesmo escrolando a página */
+  top: 15px;
+  left: 30px;
 }
 
 img {
