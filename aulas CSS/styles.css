@@ -7,15 +7,6 @@
   font-size: 62,5%; /*equivale a 10px*/
 }
 
-h1 {
-  color: #264155;
-  font-size: 5.0rem; /*equivalente a 50px -> pois leva em consideração o font-size definido em % no root*/
-  font-weight: 900; /*de 100 a 900*/
-  font-style: oblique;
-  text-decoration: underline;
-  text-align: center;
-}
-
 .background-img {
   background-image: url(https://images.unsplash.com/photo-1684266897797-d6e54c28aaf3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=928&q=80);
   background-size: cover;
@@ -24,7 +15,38 @@ h1 {
   background-position: center;
 }
 
+h1 {
+  color: #264155;
+  font-size: 5.0rem; /*equivalente a 50px -> pois leva em consideração o font-size definido em % no root*/
+  font-weight: 300; /*de 100 a 900*/
+  font-style: oblique;
+  text-decoration: underline;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.6rem;
+  font-family: 'Roboto', sans-serif;
+}
+
 p {
   text-align: justify;
   text-indent: 90px;
+}
+
+table, td, th {
+  border: 1px solid black;
+  /* border-collapse: collapse; a borda fica simples*/
+  border-collapse: separate; /* apresenta uma borda dupla  */
+}
+
+table th {
+  background-color: #264155;
+  color: white;
+}
+
+table tr:nth-child(2n + 1) { 
+  /* o n indica qualquer elemento e ele inicia do zero, então colocando 2n significa que irá começar na terceira linha. Neste caso, não pegou a primeira linha, iniciou na 3 linha e vai a cada 1 linha intercalando */
+ /*  para a primeira linha da tabela (sem contar o cabeçalho) inicie branca, seria 2n + 3 */
+  background-color: rgb(154, 154, 154);
 }
