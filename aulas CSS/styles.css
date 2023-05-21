@@ -12,6 +12,7 @@
 
 nav.menu {
   position: fixed;
+  /* position fixed faz com que o elemento fique fixado no topo da página enquanto estamos escrolando */
   background-color: #264155;
   width: 100%;
   height: 7rem;
@@ -133,3 +134,12 @@ img {
   /* já a imagem por padrão tem display: inline */
   /* elementos inline não se comportam bem com dimensões bem definidas, como o height e width. O inline-block se comporta melhor*/
 }
+
+.contact-list h2 {
+  top: 7rem;
+  position: sticky;
+  /* position sticky faz com que o elemento fique preso no topo da página (mas com o recuo do top que colocarmos), a partir de quando passamos por ela quando escrolamos */
+  background-color: #264155;
+  color: white;
+}
+
