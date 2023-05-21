@@ -50,3 +50,20 @@ table tr:nth-child(2n + 1) {
  /*  para a primeira linha da tabela (sem contar o cabeçalho) inicie branca, seria 2n + 3 */
   background-color: rgb(154, 154, 154);
 }
+
+ul, ol {
+  padding-left: 3.2rem; 
+  /* se não tiver padding-left não irá aparecer os marcadores ao lado dos itens da lista */
+  /* list-style: none; com isto, as listas ficam sem estilos - sem bolinhas ou números */
+}
+
+ul {
+  list-style: circle;
+  /* estilo de indicador ao lado do item */
+}
+
+ol {
+  list-style: decimal-leading-zero;
+  /* para colocar um zero antes do número que indica cada item na lista */
+}
+
