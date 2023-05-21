@@ -1,6 +1,9 @@
 * {
+  /* Para fugir das estilizações nativas do CSS */
   margin: 0;
   padding: 0;
+  box-sizing: border-box; 
+  /* box-sizing: border-box; preserva as dimensões dos elementos após padding */
 }
 
 :root {
@@ -67,3 +70,24 @@ ol {
   /* para colocar um zero antes do número que indica cada item na lista */
 }
 
+.box {
+  height: 10rem;
+  width: 20rem;
+  border: 4px solid #555;
+  border-radius: 4rem;
+  /* para arredondar os cantos da borda */
+  display: inline-block;
+  /* por padrão, a div tem display: block, ou seja, ela pula a linha, pq faz um bloco, e não permite que outro elemento fique ao lado dela (na mesma linha). Para que isto ocorra, precisamos colocar o inline-block */
+  background-color: cadetblue;
+  color: white;
+  padding: 1.5rem;
+  /* padding atua dentro do elemento */
+  margin: 1.5rem;
+  /* margin atua fora do elemento */
+}
+
+img {
+  height: 10rem;
+  /* já a imagem por padrão tem display: inline */
+  /* elementos inline não se comportam bem com dimensões bem definidas, como o height e width. O inline-block se comporta melhor*/
+}
