@@ -149,21 +149,35 @@ img {
   width: 20rem;
   border: 4px solid #555;
   border-radius: 4rem;
-  /* para arredondar os cantos da borda */
   display: inline-block;
-  /* por padrão, a div tem display: block, ou seja, ela pula a linha, pq faz um bloco, e não permite que outro elemento fique ao lado dela (na mesma linha). Para que isto ocorra, precisamos colocar o inline-block */
   background-color: cadetblue;
   color: white;
   padding: 1.5rem;
-  /* padding atua dentro do elemento */
   margin: 1.5rem;
-  /* margin atua fora do elemento */
   position: static;
-  /* position padrão é o static. Esta position não permite que tenha os parâmetros top left, entre outras, setadas */
 }
 
 .box-2:nth-child(2) {
   float: right;
   /* o float faz com que o elemento saia do fluxo normal dos demais elementos, e se posicione no local que definirmos, que neste caso foi o rigth. */
  /* não é uma prática tão interessante, pois pode modificar os elementos que vem após ele, tirar do eixo. Atualmente usamos o flex box*/
+}
+
+.boxes-3 {
+  display: flex;
+  /* display flex faz parte do flexbox.  */
+  flex-wrap: wrap;
+}
+
+.box-3 {
+  flex: 30%;
+  height: 10rem;
+  width: 20rem;
+  border: 4px solid #555;
+  border-radius: 4rem;
+  display: inline-block;
+  background-color: cadetblue;
+  color: white;
+  padding: 1.5rem;
+  margin: 1.5rem;
 }
