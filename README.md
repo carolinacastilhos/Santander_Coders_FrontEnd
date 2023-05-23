@@ -1,5 +1,5 @@
 <h1 align="center"> Santander Coders – Trilha Front-End </h1>
-Programa de desenvolvimento Front-End do programa Santander Coders em parceria com a Ada Tech. 
+Curso de desenvolvimento Front-End do programa Santander Coders em parceria com a Ada Tech. 
 
 
 ## Objetivo
