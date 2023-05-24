@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62,5%;
+}
+
+main {
+    /* padding: 7rem 0; */
+}
+
+h1 {
+    font-size: 4.5rem;
+    color: rgb(218, 77, 124);
+    font-style: italic;
+}
+
+.boxes {
+    display: flex;
+    flex-direction: row;
+    /* o flex-direction serve para direcionarmos o eixo principal, se será em coluna ou linha. 
+    Se colocarmos o reverse, ele fica em linha ou coluna, mas com os elementos na ordem invertida.
+    Se não colocarmos nada no flex-direction, por padrão será row. */
+    flex-wrap: wrap;
+    /* flex wrap quebra a linha dos elementos quando necessário */
+    /* podemos deixar o código mais conciso usando flex-flow: row wrap, por exemplo, que junta o flex-direction com o wrap.  */
+    justify-content: center;
+    /* o justify-content serve para alinhar o conteúdo no mesmo eixo principal */
+    /* no justify-content podemos utilizar flex-end (o conteúdo vai para o final da caixinha), flex-start (conteúdo vai para o início da caixa conforme o eixo)*/
+    /* ainda no justify-content temos o space-around que encaixa os elementos dentro do container com espaçamento entre eles 
+    já o space-evenly distribui os elementos com o mesmo espaço entre eles, inclusive com as bordas. E o space-between deixa um espaço entre os elementos, mas não na borda */
+    /* height: calc(100vh - 14rem); */
+    height: 100vh;
+    /* propriedade calc serve para realizarmos uma operação. Neste caso, queremos que o conteúdo fique no centro da tela (viewport), 
+    porém temos 7rem de padding, por isso reduzimos 14rem (parte de baixo e parte de cima do padding) */
+    /* align-items: center; alinha os elementos a partir do eixo secundário */
+    align-content: center; 
+    /* pega o conteúdo e alinha na melhor possibilidade. */
+    gap: 2rem 5rem;
+    /* o gap deixa um espaço entre os elementos. primeiro valor é o espaço na vertical e segundo valor é na horizontal, sem levar em consideração o eixo que está trabalhando */
+}
+
+.box {
+    min-height: 5rem;
+    min-width: 10rem;
+    border: 5px solid #0b0b0b;
+    border-radius: 0.5rem;
+    display: inline-block;
+    background-color: rgb(121, 121, 121);
+    color: white;
+    font-size: 2rem;
+    padding: 1.5rem; 
+    flex-basis: 30%; 
+    /* auxilia a definir a quantidade de elementos na mesma linha. Se colocamos padding, gap, etc, tem que levar em consideração na conta do flex-basis, podendo usar o calc como usamos no height. */
+    flex: 1;
+    /* flex 1 define que todos os elementos tem uma unidade flexível de peso 1, todos tem o mesmo peso, ocupam assim o máximo de espaço que podem */
+    /* para dar um peso diferente entre eles, posso colocar por exemplo no nth:child abaixo um flex: 2;, que faria com que o box 3 disputaria 2 espaços comparado a 1 dos outros, ele tende a ter mais espaço que os outros */
+    
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    /* podemos colocar um display dentro do elemento que está sendo alinhado por display flex no container maior. Pois assim, conseguimos modificar os elementos dele também, como neste exemplo, o texto dentro da caixa */
+    /* se o elemento fosse somente texto, poderíamos utilizar text-align: center; ao invés destes 3 comandos acima, porém se eu tivesse um texto e um botão, por exemplo, somente o texto iria centralizar.
+    Já com os tres comandos acima, todos os itens dentro do container irão de alinhar. */
+}
+
+.box:nth-child(3) {
+    order: -1;
+    /* modifica a ordem deste elemento em específico. Se negativo, vai para frente e se positivo, vai para trás.
+    Porém, essa questão de positivo e negativo ocorre se o order de todos eles for 0 -> quando não definimos, por padrão é 0.
+    Agora, se definirmos que todos da classe box tem order positiva, por exemplo 10, podemos colocar 1 para o elemento ir para o início, ou definir que os elementos que vem antes são outras ordens.
+    Por exemplo, nth:child(1) order: 1, nth:child(2) order: 2 e nth:child(7) order: 3, faria com que o box 7 fosse para o terceiro lugar.*/
+}
