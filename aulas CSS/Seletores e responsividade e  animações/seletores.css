@@ -48,6 +48,51 @@ table tr:nth-child(2n + 1) {
     /* para estilizar o atributo que criamos, escrevemos ele entre []*/
     /* podemos utilizar somente o data-company, que irá estilizar todos os que possuem esse atributo. Porém os que já estão de cinza terão conflito de estilização neste caso,
     pois já estao com cor de background*/
-    background-color: rgb(141, 110, 6);
+    background-color: rgb(184, 151, 43);
 }
 
+@media screen and (min-width: 1000px) {
+    /* media query -> a media query consiste de um media type e pelo menos uma expressão que limita o escopo das folhas de estilo usando media features, tal como largura, altura e cor.
+    utilizando o screen, irá atuar na tela */
+    /* tomamos ações diferentes para mídias diferentes */
+    .background-image {
+        height: 50hv;
+    }
+    /* aqui estamos indicando que quando estiver na largura de 1000px para cima, a imagem da classe ficará nesta altura definida*/
+}
+
+@media screen and (min-width: 768px) and (max-width: 999px) {
+    .background-image {
+        height: 80vh;
+    }
+    /* pensando em uma tela de tablet agora */
+}
+
+@media screen and (max-width: 767px) {
+    .background-image {
+        height: 80vh;
+    }
+    /* pensando em uma tela de celular */
+    table {
+        display: none;
+    }
+
+    h1 {
+        color: blueviolet;
+    }
+}
+
+/* podemos ver o tamanho da tela para definir os media screen no devtools:
+mobile pequeno é 320px
+mobile medio 375px
+mobile maior 425px
+tablet 768px
+laptop 1024px */
+
+@media print {
+    .background-image {
+        display: none;
+    }
+    /* utilizando print, irá atuar quando for imprimir. Neste caso, estamos definindo que quando forem imprimir não aparecerá a imagem */
+    /* não ocupará nem espaço na página de impressão */
+}
