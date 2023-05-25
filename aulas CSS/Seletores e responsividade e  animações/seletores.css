@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62,5%;
+}
+  
+.background-img {
+    background-image: url(https://images.unsplash.com/photo-1684266897797-d6e54c28aaf3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=928&q=80);
+    background-size: cover;
+    width: 100%;
+    height: 500px;
+    background-position: center;
+}
+
+h1 {
+    color: #264155;
+    font-size: 5.0rem; 
+    font-weight: 300; 
+    font-style: oblique;
+    text-decoration: underline;
+    text-align: center;
+}
+  
+h2 {
+    font-size: 2.6rem;
+}
+
+table, td, th {
+    border: 1px solid black;
+    border-collapse: separate;
+    font-size: 1.6rem; 
+}
+  
+table th {
+    background-color: #264155;
+    color: white;
+}
+  
+table tr:nth-child(2n + 1) { 
+    background-color: rgb(154, 154, 154);
+}
+
+[data-company="CCL"] {
+    /* para estilizar o atributo que criamos, escrevemos ele entre []*/
+    /* podemos utilizar somente o data-company, que irá estilizar todos os que possuem esse atributo. Porém os que já estão de cinza terão conflito de estilização neste caso,
+    pois já estao com cor de background*/
+    background-color: rgb(141, 110, 6);
+}
+
