@@ -23,6 +23,14 @@ h1 {
     font-style: oblique;
     text-decoration: underline;
     text-align: center;
+    /* display: none; */
+    /* visibility: hidden; */
+    /* com o display: none; o elemento não aparece em tela e nem ocupa aquele local. 
+    No visibility: hidden; ele some da tela mas o espaço dele que antes era ocupado, segue na tela. */
+    opacity: .4;
+    /* opacity varia de 1 a 0. O 1 indica que o elemento está normal, sem nada de opacidade, e até o 0 ele vai diminuindo a opacidade até ficar invisível com o 0.*/
+    /* no opacity, os eventos de clique e estilizações de mouse seguem ativos, mesmo que não de para ver o elemento, 
+    enquanto no visibility hidden não aparece mais nada, fica somente o espaço que antes ocupava e desabilita o evento de clique no local.*/
 }
   
 h2 {
@@ -96,3 +104,61 @@ laptop 1024px */
     /* utilizando print, irá atuar quando for imprimir. Neste caso, estamos definindo que quando forem imprimir não aparecerá a imagem */
     /* não ocupará nem espaço na página de impressão */
 }
+
+#main-button {
+    background-color: steelblue;
+    color: white;
+    border: none;
+    font-size: 2.8rem;
+    padding: 0.6rem 2.4rem;
+    width: 100%;
+    cursor: pointer;
+    /* o atributo cursor é para modificar o ponteiro do mouse. Neste caso, do pointer, ele vira uma mãozinha indicando que pode-se clicar */
+    transition: all .2s ease-in-out, background-color 1s ease-in-out;    
+    /* com o transition, definimos como será a trnasição do elemento para o seu hover*/
+    /* colocando após a vírgula o background-color, definimos exatamente o tempo que levará para fazer a transição somente da cor de fundo do elemento */
+}
+
+#main-button:hover {
+    background-color: black;
+    color: white;
+    transform: scale(.5) rotate(2deg);
+    /* com o transform conseguimos modificar diversas coisas no nosso elemento, como no exemplo acima a escala e rotacionar em graus */
+}
+
+#second-button {
+    margin-top: 2rem;
+    transform: scale(1);
+    background-color: steelblue;
+    color: white;
+    border: none;
+    font-size: 2.8rem;
+    padding: 0.6rem 2.4rem;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    animation: pulse 2s infinite;
+    /* defino alguns valores em animation e no @keyframes */
+    /* onde está infinite poderia ser 3, por exemplo, então quando carregassemos a página, faria 3 vezes a animação e pararia */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.35);
+        opacity: .6;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* performance das animações: 
+animar o elemento pelo transform e opacity não trazem perda de performance
+mas se animar margin, width, etc, traria perda de perfomance */
