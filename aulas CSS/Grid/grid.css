@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.boxes {
+    height: calc(100vh);
+    position: relative;
+
+    display: grid;
+    justify-content: flex-start;
+    gap: 2rem 5rem;
+    /* é o mesmo que escrever row-gap: 1rem; column-gap: 5rem; */
+    /* o display grid suporta muitas das coisas que o flexbox faz, como o gap, justify-content...  */
+    /*  No entanto, sempre acompanhará o eixo X, e não mudará o eixo principal como ocorre com o flexbox */
+    grid-template-columns: 3fr 1fr 1fr;
+    /* podemos tbm escrever como grid-template-columns: 3fr repeat(2, 1fr); repetir 2 vezes o 1 fr ao invés de escrever os dois 1fr */
+    /* fr indica a unidade flexível */
+    grid-template-rows: minmax(200px, 10fr) 2fr;
+}
+
+.box p {
+    font-size: 4rem;
+}
+
+.box {
+    /* height: 10rem;
+    width: 20rem; altura, width e padding influenciam no grid layout*/ 
+    border: 4px solid #555;
+    border-radius: 4rem;
+    display: inline-block;
+    background-color: cadetblue;
+    color: white;
+    /* padding: 1.5rem; */
+    display: flex;
+    margin: 1.5rem;
+    justify-content: center;
+}
+
+/* footer {
+    grid-area: footer;   
+ }    
+
+ main { 
+    grid-area: title;
+ }
+
+ @media screen and (min-width: 1024px) {
+    .page-content {
+        display: grid;
+
+        grid-template-areas:
+            ". . . "
+            ". title title footer"
+            ". title title footer"
+            ". title footer footer"
+        ;
+
+    }
+ }    
+*/
+
+/* este exemplo acima é como usar o grid areas: definimos a quantidade de linhas que teremos e colunas e o tamanho de cada area */
+/* a linha com os pontos é um "respiro", fica um espaço vazio na primeira linha. Só conseguimos usar na primeira linha pq depois vem os elementos. */
