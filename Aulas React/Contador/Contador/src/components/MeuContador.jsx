@@ -1,6 +1,8 @@
 import { useState } from "react";
 // useState é uma função que estamos importando do React com retorno de uma lista com duas posições. 
 // Na primeira posição nos dá variável de estado (neste caso será o contador) e no segunda posição nos dará uma segunda função que será setContador
+import styles from './button.module.css'
+
 
 export default function MeuContador() {
 
@@ -12,18 +14,18 @@ export default function MeuContador() {
     }
 
     return (
-        <div>
-            <h1>Meu Contador : {contador}</h1>
+        <div className="container">
+            <h1>Meu Contador :</h1>
+            <h3>{contador}</h3>
             { contador > 9 ? <h1>Valor muito alto!</h1> : null }
             {/* isto é uma renderização condicional, realizada com um operador ternário. Quando a condição for verdadeira, renderizará o primeiro código, mas enquanto for falsa, dará null, ou seja, não renderizará nada.*/}
-            <button onClick={aumentar}>Aumentar</button>
+            <button className={styles.myButton} onClick={aumentar}>Aumentar</button>
         </div>
     )
 }
 
 // colocamos o onClick que é um evento. Quando clicarmos, vai chamar a função aumentar, que dentro dela executamos uma outra função que está vindo do useState, que é a setContador
 //  o setContador vai receber um novo valor para o contador.
-
 //com o estado (useState) conseguimos modificar e renderizar valores, além de deixar nossa aplicação dinâmica
 // os eventos, como onClick, são vários. Dentro de uma tag clique ctrl + espaço e começa a escrever on, aparecerá vários eventos possíveis.
 

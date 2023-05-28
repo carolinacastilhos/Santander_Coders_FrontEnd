@@ -1,0 +1,14 @@
+.myButton {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 18px;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: #181326;
+    border-radius: 4px;
+    background-color: #a6f750;
+}
+
+/* arquivo .module, o único jeito de aplicar esta estilização é com o {styles.myButton}. Fazemos um escopo, que esta é a única classe que 
+está sendo aplicada esta estilização, mesmo que tenha outros classes com mesmo seletor, mesmo nome. */
+
