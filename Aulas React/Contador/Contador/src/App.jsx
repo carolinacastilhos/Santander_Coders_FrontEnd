@@ -1,6 +1,7 @@
 import MeuContador from "./components/MeuContador"
 import MinhaLista from "./components/MinhaLista"
 import MinhaLista2 from "./components/MinhaLista2"
+import BuscandoDados from "./components/BuscandoDados"
 
 export default function App() {
 
@@ -11,6 +12,7 @@ export default function App() {
       <h2>Minha lista:</h2>
       <MinhaLista />
       <MinhaLista2 />
+      <BuscandoDados />
     </div>    
   )
 }
