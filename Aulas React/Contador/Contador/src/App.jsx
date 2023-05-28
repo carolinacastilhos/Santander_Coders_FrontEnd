@@ -1,4 +1,6 @@
-import MeuContador from "./MeuContador"
+import MeuContador from "./components/MeuContador"
+import MinhaLista from "./components/MinhaLista"
+import MinhaLista2 from "./components/MinhaLista2"
 
 export default function App() {
 
@@ -6,6 +8,9 @@ export default function App() {
     <div>
       <h1>Olá Mundo!!</h1>
       <MeuContador />
+      <h2>Minha lista:</h2>
+      <MinhaLista />
+      <MinhaLista2 />
     </div>    
   )
 }
